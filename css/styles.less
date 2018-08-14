@@ -1,0 +1,838 @@
+/*========Сброс настроек=========*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+/*========Стартовые настройки=========*/
+body{
+	background: #ccc;
+	font-family: 'Roboto', Arial, sans-serif ;
+	font-size: 16px;
+}
+.wrapper{
+	max-width: 1700px;
+	margin: 0 auto;
+}
+.conteiner{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+ul{
+	list-style-type: none;
+	li{
+		display: block;
+		float: left;
+		text-transform: uppercase;
+	}
+}
+h1, h2, h3{
+	text-transform: uppercase;
+}
+a{
+	text-decoration: none;
+}
+input{
+	outline: none;
+}
+/*============HEADER================*/
+.header_up{
+	background: #2c3e50;
+	overflow: hidden;
+	border-bottom: 2px solid #e0dfdf;
+	.login_box{
+		li{
+			border-right: 1px solid #17202a;
+			border-left:1px solid  #374d63;
+			a{
+				font-family: "Roboto-Light";
+				font-size: 15px;
+				display: block;
+				padding: 10px 15px;
+				color: #fff;
+				text-transform: none;
+				&:hover{
+					background: linear-gradient(to bottom, #cedbe9 0%,#aac5de 9%,#6199c7 20%,#6199c7 20%,#3a84c3 38%,#3a84c3 38%,#419ad6 59%,#4bb8f0 66%,#3a8bc2 76%,#212072 100%); 
+				}
+				i{
+					margin-right: 20px;
+				}
+				span{
+					color: rgb(62, 193, 167);
+				}
+			}
+		}
+	}
+	.social{
+		float: right;
+		li{
+			border-right: 1px solid black;
+			border-left:1px solid  rgb(0, 64, 128);
+			a{
+				display: inline-block;
+				padding: 10px 15px;
+				color: #fff;
+				&:hover{
+					background: linear-gradient(to bottom, #cedbe9 0%,#aac5de 9%,#6199c7 20%,#6199c7 20%,#3a84c3 38%,#3a84c3 38%,#419ad6 59%,#4bb8f0 66%,#3a8bc2 76%,#212072 100%); 
+				}
+			}
+		}
+	}
+}
+.header_domn{
+	background: #fff;
+	overflow: hidden;
+	.logo{
+		float: left;
+		margin: 20px 0; 
+		font-size: 40px;
+		color:  rgb(0, 0, 72);
+		span{
+			color: #2cd5b4;
+		}
+	}
+	nav{
+		float: right;
+		li{
+
+			a{
+				display: inline-block;
+				color:  rgb(0, 0, 72);
+				padding: 35px 15px;
+				font-weight: bold;
+				&:hover{
+					color: #2cd5b4;
+				}
+			}
+			.search_icon{
+				margin-top: 26px;
+				margin-bottom: 24px;
+				padding: 7px;
+				border: 3px solid black;
+				border-radius: 50%;
+
+			}
+		}
+	}
+}
+/*================MAIN===================*/
+/*============Первый блок================*/
+.showing{
+	.img_list{
+		width: 100%;
+		max-height: 700px;
+		border-bottom: 2px solid #3a4e61;
+		overflow: hidden;
+		position: relative;
+		&:hover &:before{
+			opacity: 0;
+		}
+		&:hover .travel_info{
+			display: block;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: #000;
+			transition: 2s;
+			opacity: .3;
+			z-index: 5;
+		}
+		.img_box{
+			position: relative;
+			width: 500%;
+			height: 700px;
+			margin-left: -100%;
+			left: 0;
+			//transition: all .8s;
+			img{
+				display: block;
+				float: left;
+				width: 20%;
+				height: auto;
+			}	
+		}
+		.travel_info{
+			display: none;
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			top: 40%;
+			z-index: 10;
+			h2{
+				font-size: 45px;
+				line-height: 65px;
+			}
+			p{
+				font-size: 26px;
+				margin-bottom: 40px;
+			}
+			input{
+				font-size: 18px;
+				color: #fff;
+				text-transform: uppercase;
+				padding: 15px;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: .3s;
+			}
+			.button_first{
+				margin-right: 20px;
+				border: 2px solid #2cd5b4;
+				background: #2cd5b4;
+				&:hover{
+					border: 2px solid #fff;
+					background: transparent;
+				}
+			}
+			.button_second{
+				border: 2px solid #fff;
+				background: transparent;
+				&:hover{
+					border: 2px #2cd5b4;
+					background: #2cd5b4;
+				}
+			}
+		}
+		.btn_prev, .btn_next{
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			text-align: center;
+			top: 45%;
+			background: rgba(255, 255, 255, 0.3);
+			color: #fff;
+			z-index: 10;
+			i{
+				font-size: 30px;
+				line-height: 80px;
+			}	
+		}
+		.btn_prev{
+			left: 0;
+			&:hover{
+				background: #2cd5b4;
+			}
+		}
+		.btn_next{
+			right: 0;
+			&:hover{
+				background: #2cd5b4;
+			}
+		}
+	}
+	.fon{
+		background: #2c3e50;
+	}
+	.find{
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		text-transform: uppercase;
+		padding: 30px 0;
+		padding-right: 35px;
+		border-right: 2px solid #384c5f;
+		&:before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: #2c3e50;
+			transform: rotate(45deg);
+			right: -12px;
+    		top: 40%;
+			border-right: 2px solid #384c5f;
+			border-top: 2px solid #384c5f;
+		}
+		p{
+			font-size: 20px;
+			color: #91a2b2;
+		}
+		span{
+			font-size: 25px;
+			font-weight: bold;
+			color: #fff;
+		}
+	}
+	.data_find{
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 40px;
+		label{
+			font-size: 22px;
+			color: #fff;
+			input{
+				margin: 0 20px;
+				padding: 12px;
+				border: 1px solid #000;
+			}
+		}
+		.button_search{
+			font-size: 22px;
+			color: #fff;
+			text-transform: uppercase;
+			padding: 12px;
+			background: #2cd5b4;
+			cursor: pointer;
+			transition: .3s;
+			&:hover{
+				background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%);
+			}
+		}
+	}
+}
+/*==============Второй блок=================*/
+.offers{
+	width: 100%;
+	min-height: 400px;
+	background: #fff;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 150px;
+	h3{
+		font-size: 25px;
+		color: #2c3e50;
+		margin-bottom: 10px;
+	}
+	
+}
+.spesial_offers{
+	//width: 100%;
+	margin-top: 35px;
+	height: 310px;
+	box-sizing: border-box;
+	.one_offer{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 15%;
+		max-height: 250px;
+		margin-top: 60px;
+		margin-right: 20px;
+		border: 3px solid #eee;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: .3s;
+		.img_offer{
+			width: 100%;
+			height: 200px;
+			transition: .3s;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+		}
+		.offer_text1{
+			width: 100%;
+			height: 50px;
+			padding: 8px;
+			background: #eee;
+			box-sizing: border-box;
+			text-align: justify;
+			transition: .3s;
+			.text_one, .text_two{
+				display: inline-block;
+				vertical-align: middle;
+				z-index: 10;
+			}
+			.text_two{
+				float: right;
+				line-height: 40px;
+			}
+		}
+		&:hover{
+			max-height: 310px;
+			margin-top: 30px;
+			border: 3px solid #2cd5b4;
+		}
+		&:hover .img_offer{
+			height: 230px;
+		}
+		&:hover .offer_text1{
+			height: 80px;
+			background: #2c3e50;
+			color: #fff;
+			//transition: all .3s;
+		}
+	}
+	.last_offer{
+		margin-right: 0;
+	}
+}
+/*==============Третий блок==================*/
+.types{
+	position: relative;
+	width: 100%;
+	height: 520px;
+	overflow: hidden;
+	&:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: #384c5f;
+		opacity: .9;
+	}
+	img{
+		width: 100%;
+		height: auto;
+	}
+	.types_wrap{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		.types_text{
+			padding-top: 80px;
+			text-align: center;
+			h3{
+				font-size: 25px;
+				color: #fff;
+				margin-bottom: 15px;
+			}
+			p{
+				color: #9eafc0;
+				font-size: 16px;
+			}	
+		}
+		.holidays_type{
+			margin-top: 75px;
+			.holiday{
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				max-width: 170px;
+				height: 200px;
+				text-align: center;
+				margin-right: 32px;
+				color: #9eafc0;
+				.type_holiday{
+					width: 100%;
+					max-height: 170px;
+					margin-bottom: 30px;
+					padding: 40px;
+					border: 5px solid #fff;
+					border-radius: 50%;
+					box-sizing: border-box;
+				}
+				.city{
+					padding: 35px 50px;
+				}
+				.honeymoon{
+					padding: 60px 40px;
+				}
+				.beach{
+					padding: 70px 40px;
+				}
+				p{
+					font-size: 18px;
+				}
+				.holiday_dobble{
+					position: absolute;
+					display: none;
+					left: 0;
+					bottom: -20px;
+					//transition: .3s;
+					.type_holiday{
+						border: 5px solid #2cd5b4;
+						border-radius: 50%;
+					}
+					p{
+						color: #2cd5b4;
+					}
+				}
+				.city_dobble{
+					bottom: -22px;
+				}
+				.honeymoon_dobble{
+					bottom: -22px;
+				}
+				.adventure_dobble{
+					bottom: -22px;
+				}
+				.safari_dobble{
+					bottom: -22px;
+				}
+				.beach_dobble{
+					bottom: -22px;
+				}
+				&:hover .holiday_dobble{
+					display: block;
+				}
+			}
+			.holiday_last{
+				margin-right: 0;
+			}
+		}
+	}
+	
+}
+/*=============Четвертый блок=================*/
+.comments{
+	position: relative;
+	width: 100%;
+	height: 460px;
+	background: #fff;
+	overflow: hidden;
+	.clients_text{
+		margin-top: 70px;
+		text-align: center;
+		h3{
+			font-size: 25px;
+			color: #384c5f;
+			margin-bottom: 15px;
+		}
+		p{
+			//color: #9eafc0;
+			font-size: 16px;
+		}	
+	}
+	.comment_box{
+		position: absolute;
+		width: 2500px;
+		top: 200px;
+		left: -350px;
+		.comment_write{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 475px;
+			height: 140px;
+			margin-right: 20px;
+			padding: 15px;
+			border: 1px solid #eee;
+			cursor: pointer;
+			box-sizing: border-box;
+			&:hover{
+				border: 2px solid #dedede;
+			}
+			&:hover .client_name{
+				opacity: 1;
+			}
+			&:hover &:before{
+				transform: rotate(-145deg);
+				border-left: 2px solid #dedede;
+				border-top: 2px solid #dedede;
+				border-bottom: none;
+			}
+			&:hover &:after{
+				top: 0;
+				left: 0;
+				transform: rotateY(0);
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				width: 30px;
+				height: 20px;
+				background: #fff;
+				transform: rotate(-35deg);
+				border-left: 1px solid #eee;
+				border-bottom: 1px solid #eee;
+				right: 70px;
+				bottom: -12px;
+			}
+			&:after{
+				content: "";
+				position: absolute;
+				width: 472px;
+				height: 5px;
+				background: #2cd5b4;
+				transform: rotateY(90deg);
+				transition: .3s;
+				top: 0;
+				left: 0px;
+			}
+			p, span{
+				opacity: 0.6;
+			}
+			p{
+				margin-bottom: 10px;
+			}
+			.client_name{
+				font-size: 18px;
+				color: #2cd5b4;
+				line-height: 18px;
+			}
+			.country{
+				font-size: 12px;
+			}
+		}
+	}
+}
+/*===================FOOTER=====================*/
+footer{
+	background: #2c3e50;
+	font-size: 13px;
+	color: #fff;
+}
+/*===================FOOTER(верх)=====================*/
+.footer_up{
+	width: 100%;
+	height: 290px;
+	padding-top: 70px;
+	border-bottom: 2px solid #394c5f;
+	.up_column{
+		display: inline-block;
+		vertical-align: top;
+		width: 290px;
+		height: 200px;
+		text-align: left;
+		h4{
+			font-size: 25px;
+			color: #2cd5b4;
+			margin-bottom: 20px;
+		}
+	}
+	.newsletter{
+		p{
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+		input{
+			width: 145px;
+			padding: 10px;
+			color: #000;
+			border: 1px solid #000;
+			border-radius: 2px;
+		}
+		.button_go{
+			width: 50px;
+			color: #fff;
+			text-transform: uppercase;
+			margin-left: 10px;
+			padding: 10px;
+			background: #2cd5b4;
+			cursor: pointer;
+			transition: .3s;
+			&:hover{
+				background: linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%);
+			}
+		}
+	}
+	.latest_news{
+		.icons{
+			margin-bottom: 25px;
+			img{
+				display: inline-block;
+				vertical-align: top;
+				border: 1px solid #fff;
+				padding: 5px;
+				margin-right: 15px;
+			}
+			.icon_text{
+				display: inline-block;
+				vertical-align: top;
+				span{
+				line-height: 20px;
+				}
+				.date{
+					color: #2cd5b4;
+				}
+			}
+			
+		}
+	}
+	.tags{
+		li{
+			margin-right: 6px;
+			margin-bottom: 6px;
+			a{
+				display: block;
+				padding: 8px 10px;
+				border: 1px solid #fff;
+				text-transform: none;
+				color: #fff;
+				transition: .3s;
+				&:hover{
+					border: 1px solid #2cd5b4;
+					background: #2cd5b4;
+				}
+			}
+		}
+	}
+	.address{
+		p{
+			line-height: 25px;
+			margin-bottom: 20px;
+			span{
+				color: #2cd5b4;
+			}
+		}
+		.up_social{
+			li{
+				margin-right: 30px;
+				a{
+					font-size: 20px;
+					color: #fff;
+					transition: .3s;
+					&:hover{
+						opacity: .6;
+					}
+				}
+			}
+		}
+	}
+}
+/*===================FOOTER(низ)=====================*/
+.footer_down{
+	position: relative;
+	width: 100%;
+	height: 155px;
+	text-align: center;
+	ul{
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 35px;
+		.link{
+			text-transform: none;
+			a{
+				padding: 15px;
+				color: #fff;
+				font-size: 15px;
+				transition: .3s;
+				&:hover{
+					color: #2cd5b4;
+				}
+			}
+		}
+	}
+	p{
+		color: #9dafc0;
+		margin-top: 15px;
+	}
+	.button_to_up{
+		position: relative;
+		display: inline-block;
+		margin-top: 32px;
+		width: 80px;
+		height: 40px;
+		cursor: pointer;
+		background: #2cd5b4;
+		i{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 15px;
+			left: 0;
+			font-size: 15px;
+			color: #fff;
+			z-index: 100;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-top: 40px solid #2c3e50; 
+			border-right: 40px solid #2cd5b4;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			border-top: 40px solid #2c3e50; 
+			border-left: 40px solid #2cd5b4;
+		}
+	}
+}
+/*============Медиа запросы================*/
+@media screen and (max-width: 1600px) {
+	.spesial_offers{
+		.one_offer{
+			margin-right: 0;
+		}
+	}
+ }
+
+@media screen and (max-width: 1280px) {
+	.spesial_offers{
+		height: 550px;
+		.one_offer{
+			width: 25%;
+			margin-right: 50px;
+		}
+	}
+	.types{
+		height: 580px;
+		.types_phon{
+			opacity: 0;
+		}
+		.types_wrap{
+			.types_text{
+				padding-top: 40px;
+			}
+			.holidays_type{
+				margin-top: 0;
+				margin-left: 13%;
+				.holiday{
+					margin: 25px 70px 0 70px;
+					.city{
+						padding: 35px 50px;
+					}
+					.honeymoon{
+						padding: 60px 40px;
+					}
+					.beach{
+						padding: 70px 40px;
+					}
+					p{
+						font-size: 18px;
+					}
+				}
+				.holiday_honeymoon{
+					//margin-right: 0;
+				}
+				.holiday_last{
+					margin-right: 0;
+				}
+			}
+		}
+		
+	}
+ }
+
+ @media screen and (max-width: 1100px) {
+	.types .types_wrap .holidays_type .holiday{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+ }
+
+ @media screen and (max-width: 720px) {
+	.spesial_offers{
+		height: 840px;
+		.one_offer{
+			width: 40%;
+			margin-right: 10px;
+		}
+	}
+	.types{
+		height: 580px;
+	}
+ }
+
+ @media screen and (max-width: 480px) {
+	.spesial_offers{
+		height: 1800px;
+		.one_offer{
+			width: 80%;
+		}
+	}
+ }
+/*============HEADER================*/
+/*============HEADER================*/
+/*============HEADER================*/
+/*============HEADER================*/
